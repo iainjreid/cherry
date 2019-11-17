@@ -1,0 +1,25 @@
+{
+  "name": "tbc-logo-maker",
+  "version": "0.0.0",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@emphori/eslint-config": "^0.1.7",
+    "@emphori/jest-preset": "0.0.3",
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0"
+  },
+  "eslintConfig": {
+    "extends": "@emphori",
+    "env": {
+      "jest": true
+    }
+  },
+  "jest": {
+    "preset": "@emphori/jest-preset"
+  },
+  "license": "MIT",
+  "private": true
+}
