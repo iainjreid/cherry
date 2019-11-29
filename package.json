@@ -1,8 +1,9 @@
 {
   "name": "tbc-logo-maker",
   "version": "0.0.0",
+  "main": "src/main",
   "bin": {
-    "logo": "src/main"
+    "logo": "bin/logo.js"
   },
   "scripts": {
     "lint": "eslint app",

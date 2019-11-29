@@ -2,13 +2,7 @@
 
 const puppeteer = require('puppeteer');
 
-const name = process.argv[2];
-
-if (!name) {
-  return;
-}
-
-(async () => {
+module.exports = async (name) => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
@@ -49,7 +43,7 @@ if (!name) {
         </div>
       </body>
     </html>
-  `)
+  `);
 
   const { width, height } = await page.evaluate(() => {
     const { width, height } = getComputedStyle(document.querySelector('.target'));
@@ -70,11 +64,7 @@ if (!name) {
 
   await element.screenshot({ path: `logo-${width}x${height}@2x.png` });
   await browser.close();
-})();
-
-const hue = [0, 360];
-const sat = [70, 90];
-const lit = [50, 70];
+};
 
 function bound (int, min, max) {
   return ((int - min) % (max - min)) + min;
@@ -84,6 +74,10 @@ function colorFromString(str) {
   const hash = str.split('').reduce((hash, char) => {
     return hash + char.charCodeAt(0);
   }, 0);
+
+  const hue = [0, 360];
+  const sat = [70, 90];
+  const lit = [50, 70];
 
   const h = bound(hash, hue[0], hue[1]);
   const s = bound(hash, sat[0], sat[1]);
