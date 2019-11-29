@@ -3,5 +3,6 @@ node_modules/
 npm-debug.log
 
 # Ignore build output paths
+.cache/
 coverage/
-lib/
+dist/
