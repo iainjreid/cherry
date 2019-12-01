@@ -1,10 +1,10 @@
 {
-  "name": "tbc-logo-maker",
+  "name": "@emphori/cherry",
   "description": "Logo and social media preview generator",
   "version": "0.0.0",
   "main": "src/main",
   "bin": {
-    "logo": "bin/logo.js"
+    "cherry": "bin/cherry.js"
   },
   "scripts": {
     "lint": "eslint bin src",

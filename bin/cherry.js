@@ -2,7 +2,7 @@
 
 'use strict';
 
-const logo = require('..');
+const cherry = require('../src/main');
 
 const { name, description } = require(process.cwd() + '/package.json')
 
@@ -11,4 +11,4 @@ if (!(name && description)) {
   return;
 }
 
-logo(name, description);
+cherry(name, description);
