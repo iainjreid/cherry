@@ -6,7 +6,7 @@
     "logo": "bin/logo.js"
   },
   "scripts": {
-    "lint": "eslint app",
+    "lint": "eslint bin src",
     "test": "jest"
   },
   "devDependencies": {

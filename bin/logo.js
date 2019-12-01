@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 
-const logo = require("..");
+'use strict';
+
+const logo = require('..');
 
 const name = process.argv[2];
 
 if (!name) {
-  console.log("Please provide a name");
+  console.log('Please provide a name');
   return;
 }
 
