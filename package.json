@@ -1,5 +1,6 @@
 {
   "name": "tbc-logo-maker",
+  "description": "Logo and social media preview generator",
   "version": "0.0.0",
   "main": "src/main",
   "bin": {

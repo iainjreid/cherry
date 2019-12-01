@@ -4,11 +4,11 @@
 
 const logo = require('..');
 
-const name = process.argv[2];
+const { name, description } = require(process.cwd() + '/package.json')
 
-if (!name) {
-  console.log('Please provide a name');
+if (!(name && description)) {
+  console.log('Both name and description are required');
   return;
 }
 
-logo(name);
+logo(name, description);
