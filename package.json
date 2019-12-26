@@ -10,6 +10,9 @@
     "lint": "eslint bin src",
     "test": "jest"
   },
+  "dependencies": {
+    "yargs": "^15.0.2"
+  },
   "devDependencies": {
     "@emphori/eslint-config": "^0.1.7",
     "@emphori/jest-preset": "0.0.3",

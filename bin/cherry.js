@@ -2,13 +2,33 @@
 
 'use strict';
 
-const cherry = require('../src/main');
+const argv = require('yargs')
+    .usage('Usage: $0 <command> [options]')
+    .config((() => {
+      try {
+        return require(require.resolve('package.json', { paths: [ './', '../' ] }));
+      } catch (err) {
+        return {};
+      }
+    })())
+    .option('name', {
+      alias: 'n',
+      describe: "the name of your package",
+      type: 'string',
+    })
+    .option('description', {
+      alias: 'd',
+      describe: "a short description of your package",
+      type: 'string',
+    })
+    .argv;
 
-const { name, description } = require(process.cwd() + '/package.json')
+
+const { name, description } = argv;
 
 if (!(name && description)) {
   console.log('Both name and description are required');
   return;
 }
 
-cherry(name, description);
+require('../src/main')(name, description);
