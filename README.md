@@ -1,21 +1,35 @@
 # Cherry
 
-### Description
+## Description
 
-For organisations with a lot of repositories, maintaining consistent branding across them can be tough. Cherry is here to help though, with its quick and simple command line interface, you just build a template for either a logo or social preview, and run the `cherry` command in any repository you wish to generate beautiful, consistent branding.
+For organisations with a lot of repositories, maintaining consistent branding
+across them can be tough. Cherry is here to help though, with its quick and
+simple command line interface, you just build a template for either a logo or
+social preview, and run the `cherry` command in any repository you wish to
+generate beautiful, consistent branding.
 
-### Usage
+## Usage
 
-To generate your assets, you’ll first need to have built some templates _(they should be written using moustache)_. Each one must have a `.target` class that contains the desired logo or social preview.
+To generate your assets, you’ll first need to have built some templates _(they
+should be written using moustache)_. Each one must have a `.target` class that
+contains the desired logo or social preview.
 
-When you are ready to generate your first logo or social preview, navigate to the project that you wish to generate the, for, and simply run the following command.
+When you are ready to generate your first logo or social preview, navigate to
+the project that you wish to generate the, for, and simply run the following
+command.
 
 ```bash
 cherry -n “My project name” -d “It’s pretty cool”
 ```
 
-> Note that if you’re running Cherry in a Node.js project it should be able to pick up your `package.json` file, and automatically inject the values found within.
+> Note that if you’re running Cherry in a Node.js project it should be able to
+> pick up your `package.json` file, and automatically inject the values found
+> within.
 
-### Features
+## Features
 
-As mentioned above, Cherry will automatically pickup any keys defined within your projects `package.json` file _(assuming it’s a Node.js project)_. If, however, your project is not a Node.js project, or you require any custom keys, Cherry will interpret any keys that you may supply accordingly, and pass them to your templates.
+As mentioned above, Cherry will automatically pickup any keys defined within
+your projects `package.json` file _(assuming it’s a Node.js project)_. If,
+however, your project is not a Node.js project, or you require any custom keys,
+Cherry will interpret any keys that you may supply accordingly, and pass them to
+your templates.
