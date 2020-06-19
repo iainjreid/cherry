@@ -2,7 +2,7 @@
   "name": "@emphori/cherry",
   "description": "Logo and social media preview generator",
   "version": "0.0.0",
-  "main": "src/main",
+  "main": "lib/cherry.js",
   "bin": {
     "cherry": "bin/cherry.js"
   },
@@ -11,14 +11,14 @@
     "test": "jest"
   },
   "dependencies": {
+    "puppeteer": "^2.0.0",
     "yargs": "^15.0.2"
   },
   "devDependencies": {
     "@emphori/eslint-config": "^0.1.7",
     "@emphori/jest-preset": "0.0.3",
     "eslint": "^6.5.1",
-    "jest": "^24.9.0",
-    "puppeteer": "^2.0.0"
+    "jest": "^24.9.0"
   },
   "eslintConfig": {
     "extends": "@emphori",
