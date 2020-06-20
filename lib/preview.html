@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <style>
+      html, body {
+        width: max-content;
+        height: max-content;
+        display: flex;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      .target {
+        margin: auto;
+        padding: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script type="module">
+      import { html } from "https://cdn.jsdelivr.net/gh/Emphori/fui@HEAD/lib/shared/globals.js"
+
+      // Register Fui elements as globals
+      html(window)
+    </script>
+
+    <script type="module" defer>
+      import target from "./defaults/social.js"
+
+      // Build and append the target preview
+      document.body.appendChild(target({
+        name: 'hello',
+        description: 'world'
+      }))
+    </script>
+  </body>
+</html>
